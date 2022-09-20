@@ -1,0 +1,39 @@
+.woocommerce .woocommerce-MyAccount-content table.shop_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 40px;
+  border: none;
+  thead {
+    tr {
+      th {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        color: #343a40;
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #dcdcdc;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: #343a40;
+        padding: 12px;
+        border-bottom: 1px solid #dcdcdc;
+        &:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .table-striped-columns > :not(caption) > tr > :nth-child(2n),
+  .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f8f9fa;
+  }
+}

@@ -1,0 +1,38 @@
+//styles for pages Regulamin, Koszty dostawy, Czas realizacji zamówień etc.
+.information-page {
+  margin-top: 80px;
+  &>.wp-block-group__inner-container {
+    display: flex;
+  }
+  .wp-block-navigation {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+      width: 20%;
+      padding-right: 24px;
+    }
+  }
+  .wp-block-navigation-item {
+    margin-bottom: 32px;
+  }
+  .current-menu-item {
+    font-weight: bold;
+  }
+  .information-text-content {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+  }
+  .information-main-heading {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .information-description-heading {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .information-description {
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,125 @@
+.page-contact {
+  @media (min-width: 782px) {
+    .wp-block-columns {
+      flex-wrap: wrap !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    .wp-block-columns {
+      flex-wrap: nowrap !important;
+    }
+  }
+  .contact-boxs-wrapper {
+    .active {
+      border: #7d1942 1px solid;
+    }
+  }
+
+  .maps-container {
+    > div {
+      position: relative;
+    }
+    .active {
+      position: relative;
+      left: 0;
+    }
+    .inactive {
+      position: absolute;
+      left: -100%;
+    }
+  }
+
+  .flex-grow {
+    .wp-block-column {
+      flex-grow: 1 !important;
+    }
+  }
+  .full-w {
+    width: 100%;
+  }
+  .contact-box {
+    padding: 48px;
+    border: 1px solid #dcdcdc;
+    width: 100%;
+    flex: 1 1 480px;
+  }
+
+  .contact-boxs-wrapper {
+    flex-wrap: wrap;
+    gap: 24px !important;
+  }
+
+  .contact-center {
+    justify-content: center;
+  }
+
+  .contact-form {
+    padding-top: 80px;
+    .form-control {
+      padding: 13px 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      textarea {
+        height: 96px;
+      }
+    }
+    .wpcf7-acceptance {
+      .wpcf7-list-item {
+        margin: 0;
+      }
+      .wpcf7-list-item-label {
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+    .btn:disabled {
+      background: #7d1942;
+      color: #fff;
+    }
+
+    .col-440 {
+      flex: 0 1 440px;
+      p {
+        margin-bottom: 0;
+        font-size: 12px;
+        font-style: italic;
+        color: #868e96;
+        line-height: 17px;
+      }
+      @media screen and (max-width: 598px) {
+        flex: 1 1 440px;
+      }
+    }
+    .col-120 {
+      flex: 1 0 120px;
+    }
+  }
+
+  .contact-info {
+    .wp-block-group__inner-container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .wp-block-group {
+      gap: 16px;
+      align-items: flex-start !important;
+      figure {
+        width: 24px;
+        height: 24px;
+        min-height: 24px;
+        min-width: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .mobile-hide {
+      display: none;
+    }
+  }
+}

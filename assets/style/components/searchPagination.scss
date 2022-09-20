@@ -1,0 +1,36 @@
+.search__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 80px;
+  .page-numbers {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 12px;
+    li {
+      span,
+      a {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        background-color: #9d1742;
+        color: #fff;
+      }
+      a {
+        background-color: #868e96;
+        color: #fff;
+        &:hover {
+          background-color: #343a40;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

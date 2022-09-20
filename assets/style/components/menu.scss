@@ -1,0 +1,402 @@
+.topbar-menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      padding: 8px 0;
+    }
+    > li + li {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -24px;
+        margin-top: -10px;
+        width: 1px;
+        height: 20px;
+        background: currentColor;
+      }
+    }
+    .menu-item-has-children {
+      position: relative;
+      .sub-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 170px;
+        background: #fff;
+        box-shadow: 0px 0px 24px #00000029;
+        z-index: 100;
+        padding: 12px 24px;
+        li > a {
+          display: block;
+          padding: 8px 0;
+        }
+      }
+      &:hover,
+      &:focus {
+        > .sub-menu {
+          display: block;
+        }
+      }
+    }
+    .my-account {
+      > a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        &:before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url('/app/themes/foreto/assets/img/icons/person-circle.svg') no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.nav-bar {
+  .nav-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    > li:first-of-type {
+      background-color: #1e8a4c;
+    }
+    .menu-item {
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+    > .menu-item:hover,
+    > .menu-item:focus {
+      background-color: #7a7e83;
+      > span {
+        color: #fff;
+      }
+    }
+    .menu-item {
+      display: flex;
+      a {
+        &:focus,
+        &:hover {
+          color: #fff;
+        }
+      }
+      .menu-item {
+        a {
+          &:focus,
+          &:hover {
+            color: #7d1942;
+          }
+        }
+      }
+    }
+    .menu-item span a {
+      padding: 20px 32px;
+    }
+    > .current-menu-item {
+      background-color: #7a7e83;
+    }
+    .menu-item {
+      .sub-menu {
+        .current-menu-item {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+    .sub-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      transition-duration: 400ms;
+      transition: all 0.3s ease;
+      position: absolute;
+      width: 100%;
+      background-color: #fff;
+      color: #343a40;
+      z-index: 100;
+    }
+    .menu-item-has-children {
+      position: relative;
+      > {
+        span {
+          &:after {
+            content: '';
+            height: 6px;
+            width: 10px;
+            padding: 31px;
+            background: url('/app/themes/foreto/assets/img/icons/arrow-down.svg') no-repeat;
+            background-position: center;
+            transition: all 0.3s ease;
+          }
+        }
+        .sub-menu {
+          > .menu-item-has-children:hover,
+          > .menu-item-has-children:focus {
+            > span {
+              background-color: #f0f0f0;
+              &:after {
+                transform: rotate(-90deg) translateY(10px);
+              }
+            }
+            .sub-menu {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .menu-item:hover,
+          .menu-item:focus {
+            background-color: #f0f0f0;
+          }
+          span {
+            &:after {
+              transform: rotate(-90deg);
+              background: url('/app/themes/foreto/assets/img/icons/arrow-down-dark.svg') no-repeat;
+              background-position: center;
+            }
+          }
+          .sub-menu {
+            span {
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .menu-item-has-children:hover,
+    > .menu-item-has-children:focus {
+      > .sub-menu {
+        visibility: visible;
+        opacity: 1;
+      }
+      > span {
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    > .menu-item-has-children {
+      > .sub-menu {
+        flex-direction: column;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        top: 62px;
+        left: 0;
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.16);
+        span {
+          width: 100%;
+        }
+        .sub-menu {
+          left: 100%;
+          display: flex;
+          width: fit-content;
+          box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.16);
+          visibility: hidden;
+          opacity: 0;
+          span a {
+            padding: 20px 40px;
+          }
+          .menu-item-has-children {
+            display: flex;
+            flex-direction: column;
+            min-width: 240px;
+            > span {
+              position: relative;
+              font-weight: 700;
+              text-transform: uppercase;
+              a {
+                &:before {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  height: 1px;
+                  width: 50%; /* or 100px */
+                  border-bottom: 1px solid #868e96;
+                }
+              }
+            }
+            &:hover,
+            &:focus {
+              background-color: #fff;
+              > span {
+                background-color: #fff;
+              }
+            }
+          }
+          .sub-menu {
+            display: flex;
+            flex-direction: column;
+            position: unset;
+            width: 100%;
+            box-shadow: none;
+            a {
+              transition: all 0.3s ease;
+            }
+            .current-menu-item {
+              background-color: #fff;
+            }
+            li {
+              &:hover,
+              &:focus {
+                background-color: #fff;
+                a {
+                  transform: translateX(10px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.offcanvas {
+  .nav-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-menu__list {
+    > li:first-of-type {
+      background-color: #1e8a4c;
+    }
+  }
+  .menu-item-has-children {
+    > span {
+      .toggle {
+        height: 6px;
+        width: 10px;
+        padding: 31px;
+        background: url('/app/themes/foreto/assets/img/icons/arrow-down.svg') no-repeat;
+        background-position: center;
+        transition: all 0.3s ease;
+      }
+      .toggle.opened {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    height: 0;
+    .sub-menu {
+      .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+      }
+    }
+  }
+  .sub-menu.opened {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+  .current-menu-item {
+    background-color: #7a7e83;
+  }
+  .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-item {
+    width: 100%;
+    .current-menu-item {
+      background-color: #f0f0f0;
+      > span > a {
+        color: #7d1942 !important;
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 20px 12px;
+        text-transform: uppercase;
+        width: 100%;
+        font-weight: 700;
+      }
+    }
+    .sub-menu {
+      background-color: #f0f0f0;
+      span {
+        padding-left: 16px;
+        a {
+          font-weight: 400;
+        }
+      }
+      .sub-menu {
+        span {
+          padding-left: 32px;
+          padding-right: 32px;
+          a {
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #868e96;
+          }
+        }
+        background-color: #fff;
+        .sub-menu {
+          span a {
+            font-weight: 400;
+            text-transform: none;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .menu-item-has-children {
+      > span {
+        .toggle {
+          background: url('/app/themes/foreto/assets/img/icons/arrow-down-dark.svg') no-repeat;
+          background-position: center;
+        }
+      }
+    }
+    .menu-item {
+      span {
+        a {
+          color: #343a40;
+          text-transform: none;
+        }
+      }
+      .menu-item-has-children {
+        > span {
+          .toggle {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+//variables
+@import 'variables';
+@import 'mixins';
+
+//bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import './bootstrap/forms';
+@import './bootstrap/buttons';
+@import './bootstrap/nav';
+@import './bootstrap/accordion';
+@import './bootstrap/type';
+
+@import '~slick-carousel/slick/slick.scss';
+
+//theme
+@import 'base';
+@import 'util';
+
+@import './layout/header';
+@import './layout/footer';
+
+@import './components/menu';
+@import './components/offcanvas';
+@import './components/button';
+@import './components/product';
+@import './components/breadcrumbs';
+@import './components/cookie-bar';
+@import './components/forms';
+@import './components/accountButtons';
+@import './components/ordersTable';
+@import './components/searchPagination';
+
+// //pages
+@import './pages/page-home';
+@import './pages/page-single-product';
+@import './pages/page-information';
+
+@import './pages/page-cart';
+@import './pages/page-404';
+@import './pages/page-faq';
+@import './pages/page-about';
+@import './pages/page-login';
+@import './pages/page-contact';
+@import './pages/page-checkout';
+@import './pages/page-account';
+@import './pages/page-newsletter';
+@import './woocommerce';

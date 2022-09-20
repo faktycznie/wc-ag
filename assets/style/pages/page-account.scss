@@ -1,0 +1,134 @@
+@media screen and (min-width: 1000px) {
+  .mobile-menu__top,
+  .mobile-menu__bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .woocommerce > .woocommerce-MyAccount-navigation {
+    display: none;
+  }
+  .woocommerce-MyAccount-content {
+    width: 100% !important;
+  }
+  .mobile-menu {
+    .mobile-menu__top,
+    .mobile-menu__bottom {
+      width: 100%;
+      display: flex;
+      .woocommerce-MyAccount-navigation {
+        float: none;
+        width: 100%;
+        ul {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          li {
+            max-width: 100%;
+            a {
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              &:after {
+                background-image: url('/app/themes/foreto/assets/img/icons/arrow-down-dark.svg');
+                content: '';
+                height: 40px;
+                width: 40px;
+                display: inline-flex;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 20px;
+                cursor: pointer;
+                pointer-events: none;
+              }
+            }
+          }
+          li.is-active a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:after {
+              content: '';
+              height: 40px;
+              width: 40px;
+              display: inline-flex;
+              background-repeat: no-repeat;
+              background-position: center;
+              padding: 20px;
+              cursor: pointer;
+            }
+          }
+          li.is-active.open {
+            a {
+              &:after {
+                background-image: url('/app/themes/foreto/assets/img/icons/arrow-up.svg');
+              }
+            }
+          }
+          li.is-active.close {
+            margin-bottom: 24px;
+            a {
+              &:after {
+                background-image: url('/app/themes/foreto/assets/img/icons/arrow-down.svg');
+              }
+            }
+          }
+        }
+      }
+    }
+    .content__wrapper.open {
+      display: block;
+      margin-top: 24px;
+    }
+    .content__wrapper.close {
+      display: none;
+    }
+    .woocommerce-EditAccountForm {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      border: 1px solid #dcdcdc;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      .form-row {
+        grid-template-columns: unset;
+        display: initial;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  .woocommerce-Addresses {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+  .woocommerce-Address {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    .woocommerce-Address-title {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #f0f0f0;
+      color: #343a40;
+      a {
+        color: #7d1942;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.page-about {
+  @media (min-width: 782px) {
+    .wp-block-columns {
+      flex-wrap: wrap !important;
+    }
+  }
+  @media (min-width: 1200px) {
+    .wp-block-columns {
+      flex-wrap: nowrap !important;
+    }
+  }
+  .flex-grow {
+    .wp-block-column {
+      flex-grow: 1 !important;
+    }
+  }
+  .full-w {
+    width: 100%;
+  }
+  @media (max-width: 1200px) {
+    .mobile-hide {
+      display: none;
+    }
+  }
+}

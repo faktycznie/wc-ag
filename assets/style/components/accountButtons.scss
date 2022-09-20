@@ -1,0 +1,73 @@
+.woocommerce-MyAccount-navigation {
+  .woocommerce-MyAccount-navigation-link {
+    a {
+      &::before {
+        content: '';
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-right: 21px;
+      }
+    }
+    &--edit-account a {
+      &::before {
+        background-image: url('/app/themes/foreto/assets/img/icons/person-circle.svg');
+      }
+    }
+    &--orders a {
+      &::before {
+        background-image: url('/app/themes/foreto/assets/img/icons/card-list.svg');
+      }
+    }
+    &--edit-address a {
+      &::before {
+        background-image: url('/app/themes/foreto/assets/img/icons/geo-alt-fill.svg');
+      }
+    }
+    &--customer-logout a {
+      &::before {
+        background-image: url('/app/themes/foreto/assets/img/icons/exit-to-app.svg');
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+  }
+  li {
+    display: flex;
+    width: 100%;
+    max-width: 354px;
+    a {
+      width: 100%;
+      padding: 28px;
+      font-size: 16px;
+      line-height: 28px;
+      color: #343a40;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: #fff;
+        background-color: #7d1942;
+        &::before {
+          filter: invert(1) brightness(2);
+        }
+      }
+    }
+  }
+  li.is-active {
+    a {
+      color: #fff;
+      background-color: #7d1942;
+      &::before {
+        filter: invert(1) brightness(2);
+      }
+    }
+  }
+}

@@ -1,0 +1,522 @@
+.woocommerce.single-product {
+  span.onsale {
+    display: inline-flex;
+    position: static;
+    margin: 0 0 24px;
+    + span {
+      margin-left: 10px;
+    }
+  }
+  .product__buttons {
+    display: flex;
+    form.cart {
+      margin: 0;
+    }
+  }
+  .downloads {
+    position: relative;
+    &__btn {
+      height: 48px;
+      font-size: 16px;
+      line-height: 1;
+      padding: 13px 32px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 6px;
+        background: url('/app/themes/foreto/assets/img/icons/download-arrow.svg') no-repeat;
+      }
+      &.open:after {
+        transform: scale(-1);
+      }
+    }
+    &__list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      box-shadow: 0px 0px 24px #00000029;
+      list-style: none;
+      margin: 0;
+      padding: 20px 24px;
+      gap: 16px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__btn.open + ul {
+      display: flex;
+    }
+    &__item {
+      &.pdf {
+        position: relative;
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 14px;
+          height: 16px;
+          background: url('/app/themes/foreto/assets/img/icons/icon-pdf.svg') no-repeat;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+//cart popup
+
+.single_add_to_cart_button {
+  .xoo-cp-added {
+    display: none;
+  }
+}
+
+.woocommerce,
+.woocommerce-products {
+  a.added_to_cart {
+    display: none;
+  }
+  a.button,
+  button.button,
+  input.button {
+    position: relative;
+
+    &.loading {
+      opacity: 0.25;
+      &::after {
+        font-size: 12px;
+        font-family: WooCommerce;
+        content: '\e01c';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        right: 6px;
+        margin: -6px 0 0;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+    }
+    &.added {
+      &::after {
+        font-size: 12px;
+        font-family: WooCommerce;
+        content: '\e017';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 50%;
+        right: 6px;
+        margin: -6px 0 0;
+      }
+    }
+    button.single_add_to_cart_button.added {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.xoo-cp-modal {
+  .xoo-cp-container {
+    max-width: 984px;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+  }
+  span.xoo-cp-close {
+    top: 24px;
+    right: 24px;
+    border-radius: 0;
+    background: none;
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url('/app/themes/foreto/assets/img/icons/x.svg') no-repeat;
+    }
+  }
+  .xoo-cp-atcn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 64px;
+    background: #343a40 !important;
+    color: #fff !important;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 0;
+    margin: 0;
+    padding-right: 45px;
+    .xoo-cp-icon-check {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      background: #1e8a4c;
+      border-radius: 50%;
+      min-width: 24px;
+    }
+  }
+  .xoo-cp-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    margin: unset;
+    clear: none;
+    text-align: unset;
+    a {
+      min-width: 180px;
+      width: 180px;
+    }
+  }
+}
+.product-popup {
+  padding: 24px;
+  @media screen and (min-width: 768px) {
+    padding: 50px 24px 80px 24px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  &__img {
+    img {
+      max-width: 228px;
+      border: 1px solid #dcdcdc;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 35px;
+    color: $style;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+}
+
+.products-archive {
+  margin: 0 0 40px;
+  @include media-breakpoint-up(lg) {
+    margin: 0 0 80px;
+  }
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 30px;
+    .woocommerce-result-count {
+      display: none !important;
+      color: #868e96;
+      margin: 0 0 24px;
+      @include media-breakpoint-up(lg) {
+        display: block !important;
+      }
+    }
+    .woocommerce-ordering {
+      color: #868e96;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 24px;
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: auto;
+      }
+      label {
+        display: none;
+        flex-shrink: 0;
+        @include media-breakpoint-up(lg) {
+          display: inline-block;
+        }
+      }
+      select {
+        color: #343a40;
+        background-color: #fff;
+      }
+    }
+    .woocommerce-notices-wrapper {
+      width: 100%;
+      margin: 0 0 30px;
+      &:empty {
+        margin: 0;
+      }
+    }
+  }
+}
+
+//filters
+.products-archive .sidebar {
+  .mobile-filters-close {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    font-weight: 700;
+    min-height: 64px;
+    &:before {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 13px;
+      background: url('/app/themes/foreto/assets/img/icons/x-filters.svg') no-repeat;
+      margin-right: 16px;
+    }
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .bapf_body {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      li {
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+    select {
+      @extend .form-select;
+      background-color: #fff;
+      color: #343a40;
+    }
+  }
+  .berocket_ajax_group_filter_title ~ .berocket_single_filter_widget .bapf_body {
+    ul {
+      padding: 16px 0;
+      border-top: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
+    }
+  }
+  .bapf_asradio2 ul li input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #868e96;
+    background: #fff;
+    border-radius: 50%;
+    padding: 3px;
+    margin-right: 16px;
+    &:checked {
+      border: 4px solid #1E8A4C;
+      + label {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .bapf_ckbox_sqchck input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #868e96;
+    background: #fff;
+    margin-right: 16px;
+    border-radius: 2px;
+    &:after {
+      width: 6px;
+      height: 10px;
+    }
+    &:checked {
+      background: #1e8a4c;
+      &:after {
+        border-color: #fff;
+      }
+      + label {
+        color: #1E8A4C;
+      }
+    }
+  }
+  .berocket_single_filter_widget .bapf_head h3,
+  .berocket_ajax_group_filter_title {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0 0 32px;
+  }
+  .bapf_sfilter {
+    margin: 0 0 32px;
+  }
+  .berocket_ajax_group_filter_title {
+    margin-top: 40px;
+  }
+  .berocket_ajax_group_filter_title ~ .berocket_single_filter_widget .bapf_head h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 16px;
+  }
+  .bapf_update {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    border: none;
+    background: #343a40;
+    color: #fff;
+    padding: 11px 24px;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      background: #868e96;
+    }
+  }
+  .bapf_reset {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 13px;
+      background: url('/app/themes/foreto/assets/img/icons/x-filters.svg') no-repeat;
+      margin-right: 16px;
+    }
+    &:hover,
+    &:focus {
+      color: $style;
+    }
+  }
+}
+
+.products-archive__sort {
+  .mobile-filters-open {
+    display: inline-flex;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .bapf_sfilter {
+    background: #f0f0f0;
+    width: 100%;
+    order: 2;
+    padding: 8px 30px;
+    margin: 0 0 24px;
+    > .bapf_head {
+      display: none;
+    }
+    .berocket_aapf_widget_selected_filter {
+      display: flex;
+      gap: 16px;
+      .bapf_sfa_taxonomy {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        > span {
+          position: relative;
+          &:after {
+            content: ':';
+          }
+        }
+        ul {
+          font-size: 12px;
+          line-height: 22px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          background: #fff;
+          padding: 5px 16px;
+        }
+        a {
+          display: inline-flex;
+          align-items: center;
+          i {
+            order: 2;
+            margin-left: 9px;
+            &:before {
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background: url('/app/themes/foreto/assets/img/icons/x-filters-small.svg') no-repeat;
+            }
+          }
+        }
+      }
+      .bapf_sfa_unall {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .products-archive .sidebar--desktop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 12px 34px;
+    z-index: 100;
+    background: #fff;
+    overflow-y: auto;
+    &.open {
+      left: 0;
+    }
+    .admin-bar & {
+      padding-top: 46px;
+    }
+    .bapf_update {
+      width: 100%;
+    }
+    .bapf_reset {
+      width: 100%;
+      justify-content: center;
+    }
+    .bapf_sfilter ul li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .bapf_asradio2 ul li input[type='checkbox'],
+    .bapf_ckbox_sqchck input[type='checkbox'] {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,521 @@
+.color,
+.fc-orange {
+  color: $style;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  > span {
+    color: $style;
+  }
+}
+
+.rounded-right,
+.rounded-right-48 {
+  border-radius: 0 0 48px 0;
+}
+
+.rounded-right-36 {
+  border-radius: 0 0 36px 0;
+}
+
+.rounded-slider {
+  border-radius: 0 300px 300px 0;
+}
+
+//paddings and margins
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.p-36 {
+  padding: 36px;
+}
+
+.me-30 {
+  margin-right: 30px;
+}
+
+//top and bottom
+.pt-00,
+.py-00 {
+  padding-top: 0;
+}
+
+.pb-00,
+.py-00 {
+  padding-bottom: 0;
+}
+
+.pt-40,
+.py-40 {
+  padding-top: 40px;
+}
+
+.pb-40,
+.py-40 {
+  padding-bottom: 40px;
+}
+
+.pt-80,
+.py-80 {
+  padding-top: 80px;
+}
+
+.pb-80,
+.py-80 {
+  padding-bottom: 80px;
+}
+
+.pt-120,
+.py-120 {
+  padding-top: 120px;
+}
+
+.pb-120,
+.py-120 {
+  padding-bottom: 120px;
+}
+
+.pt-160,
+.py-160 {
+  padding-top: 160px;
+}
+
+.pb-160,
+.py-160 {
+  padding-bottom: 160px;
+}
+
+.mt-40,
+.my-40 {
+  margin-top: 40px;
+}
+
+.mb-40,
+.my-40 {
+  margin-bottom: 40px;
+}
+
+.mt-64,
+.my-64 {
+  margin-top: 64px;
+}
+
+.mb-64,
+.my-64 {
+  margin-bottom: 64px;
+}
+
+.mt-80,
+.my-80 {
+  margin-top: 80px;
+}
+
+.mb-80,
+.my-80 {
+  margin-bottom: 80px;
+}
+
+.mt-120,
+.my-120 {
+  margin-top: 120px;
+}
+
+.mb-120,
+.my-120 {
+  margin-bottom: 120px;
+}
+
+.mt-160,
+.my-160 {
+  margin-top: 160px;
+}
+
+.mb-160,
+.my-160 {
+  margin-bottom: 160px;
+}
+
+.gap-16 {
+  gap: 16px !important;
+}
+
+@include media-breakpoint-up(sm) {
+  .pt-sm-00,
+  .py-sm-00 {
+    padding-top: 0;
+  }
+
+  .pb-sm-00,
+  .py-sm-00 {
+    padding-bottom: 0;
+  }
+
+  .pt-sm-40,
+  .py-sm-40 {
+    padding-top: 40px;
+  }
+
+  .pb-sm-40,
+  .py-sm-40 {
+    padding-bottom: 40px;
+  }
+
+  .pt-sm-80,
+  .py-sm-80 {
+    padding-top: 80px;
+  }
+
+  .pb-sm-80,
+  .py-sm-80 {
+    padding-bottom: 80px;
+  }
+
+  .pt-sm-120,
+  .py-sm-120 {
+    padding-top: 120px;
+  }
+
+  .pb-sm-120,
+  .py-sm-120 {
+    padding-bottom: 120px;
+  }
+
+  .pt-sm-160,
+  .py-sm-160 {
+    padding-top: 160px;
+  }
+
+  .pb-sm-160,
+  .py-sm-160 {
+    padding-bottom: 160px;
+  }
+
+  .mt-sm-40,
+  .my-sm-40 {
+    margin-top: 40px;
+  }
+
+  .mb-sm-40,
+  .my-sm-40 {
+    margin-bottom: 40px;
+  }
+
+  .mt-sm-64,
+  .my-sm-64 {
+    margin-top: 64px;
+  }
+
+  .mb-sm-64,
+  .my-sm-64 {
+    margin-bottom: 64px;
+  }
+
+  .mt-sm-80,
+  .my-sm-80 {
+    margin-top: 80px;
+  }
+
+  .mb-sm-80,
+  .my-sm-80 {
+    margin-bottom: 80px;
+  }
+
+  .mt-sm-120,
+  .my-sm-120 {
+    margin-top: 120px;
+  }
+
+  .mb-sm-120,
+  .my-sm-120 {
+    margin-bottom: 120px;
+  }
+
+  .mt-sm-160,
+  .my-sm-160 {
+    margin-top: 160px;
+  }
+
+  .mb-sm-160,
+  .my-sm-160 {
+    margin-bottom: 160px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .pt-md-00,
+  .py-md-00 {
+    padding-top: 0;
+  }
+
+  .pb-md-00,
+  .py-md-00 {
+    padding-bottom: 0;
+  }
+
+  .pt-md-40,
+  .py-md-40 {
+    padding-top: 40px;
+  }
+
+  .pb-md-40,
+  .py-md-40 {
+    padding-bottom: 40px;
+  }
+
+  .pt-md-80,
+  .py-md-80 {
+    padding-top: 80px;
+  }
+
+  .pb-md-80,
+  .py-md-80 {
+    padding-bottom: 80px;
+  }
+
+  .pt-md-120,
+  .py-md-120 {
+    padding-top: 120px;
+  }
+
+  .pb-md-120,
+  .py-md-120 {
+    padding-bottom: 120px;
+  }
+
+  .pt-md-160,
+  .py-md-160 {
+    padding-top: 160px;
+  }
+
+  .pb-md-160,
+  .py-md-160 {
+    padding-bottom: 160px;
+  }
+
+  .mt-md-40,
+  .my-md-40 {
+    margin-top: 40px;
+  }
+
+  .mb-md-40,
+  .my-md-40 {
+    margin-bottom: 40px;
+  }
+
+  .mt-md-64,
+  .my-md-64 {
+    margin-top: 64px;
+  }
+
+  .mb-md-64,
+  .my-md-64 {
+    margin-bottom: 64px;
+  }
+
+  .mt-md-80,
+  .my-md-80 {
+    margin-top: 80px;
+  }
+
+  .mb-md-80,
+  .my-md-80 {
+    margin-bottom: 80px;
+  }
+
+  .mt-md-120,
+  .my-md-120 {
+    margin-top: 120px;
+  }
+
+  .mb-md-120,
+  .my-md-120 {
+    margin-bottom: 120px;
+  }
+
+  .mt-md-160,
+  .my-md-160 {
+    margin-top: 160px;
+  }
+
+  .mb-md-160,
+  .my-md-160 {
+    margin-bottom: 160px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .gy-sm-3 {
+    --bs-gutter-y: 1rem;
+  }
+}
+
+.bg-orange {
+  background-color: $style;
+}
+
+.fc-white {
+  color: #fff;
+  > a {
+    color: inherit;
+  }
+}
+
+.fc-inherit {
+  color: inherit !important;
+}
+
+.hover-zoom {
+  overflow: hidden;
+  img {
+    transition: all 0.3s;
+  }
+  &:hover,
+  .card:hover & {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.plus-sign {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background: url('/app/themes/foreto/assets/img/icons/circle-plus.svg')
+      no-repeat;
+    pointer-events: none;
+    width: 71px;
+    height: 71px;
+    opacity: 0;
+  }
+  &:hover,
+  .card:hover & {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.hover-opacity {
+  background-color: #000;
+  img {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  &:hover,
+  .card:hover & {
+    img {
+      opacity: 0.5;
+    }
+  }
+}
+
+.arrow-right {
+  position: relative;
+  padding-right: 20px;
+
+  @include arrow-right(12px, 3px);
+
+  &--hidden {
+    &:before {
+      opacity: 0;
+    }
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+}
+
+.arrow-right-link {
+  position: relative;
+  padding-right: 20px;
+  @include arrow-right(8px, 2px);
+
+  &--hidden {
+    &:before {
+      opacity: 0;
+    }
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+}
+
+.arrow-left-link {
+  position: relative;
+  padding-left: 20px;
+  @include arrow-left(8px, 2px);
+
+  &--hidden {
+    &:before {
+      opacity: 0;
+    }
+    &:hover:before {
+      opacity: 1;
+    }
+  }
+}
+
+.readmore {
+  color: $style;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 19px;
+  @include arrow-right(8px, 2px);
+}
+
+.slideup {
+  min-height: 1em;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 1;
+  > * {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  &:hover,
+  .card:hover & {
+    > * {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-pagination {
+  &--orange {
+    position: static;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    .swiper-pagination-bullet {
+      margin: 0;
+      border-radius: 0;
+      width: 50px;
+      height: 2px;
+      background: #7e7e7e; //e2e2e2 not visible :(
+    }
+    .swiper-pagination-bullet-active {
+      background: $style;
+    }
+  }
+}

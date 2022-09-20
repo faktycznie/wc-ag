@@ -1,0 +1,44 @@
+.faq {
+  &__wrapper {
+    max-width: 1236px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__item {
+    background-color: #f0f0f0;
+  }
+  &__header {
+    background-color: #f0f0f0;
+  }
+  &__button {
+    padding: 23px 40px;
+    color: #343a40;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  &__body {
+    background-color: #f0f0f0;
+    padding: 4px 40px 23px 40px;
+  }
+  .accordion-item .accordion-button[aria-expanded='false']:after {
+    background-image: url('/app/themes/foreto/assets/img/icons/arrow-down-dark.svg');
+    background-repeat: no-repeat;
+    content: '';
+    height: 8px;
+    width: 16px;
+    background-size: contain;
+  }
+  .accordion-item .accordion-button[aria-expanded='true']:after {
+    background-image: url('/app/themes/foreto/assets/img/icons/arrow-up-dark.svg');
+    background-repeat: no-repeat;
+    content: '';
+    height: 8px;
+    width: 16px;
+    background-size: contain;
+  }
+}

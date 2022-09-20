@@ -1,0 +1,43 @@
+$style: #7D1942 !default;
+$style2: #1E8A4C !default;
+$style3: #343A40 !default;
+$style4: #BF1930 !default;
+$agrochemBlue: #0079BC;
+
+$theme-colors: (
+    "primary": $style,
+    "secondary": $style2,
+);
+
+$btn-font-family: 'Open Sans', sans-serif;
+$btn-font-weight: 700;
+$btn-line-height: 22px;
+
+$btn-padding-y: 13px;
+$btn-padding-x: 24px;
+$btn-font-size: 12px;
+$btn-border-radius: 0;
+$btn-box-shadow: none;
+$btn-border-width: 0;
+
+$btn-link-color:              $style;
+$btn-link-hover-color:        $style4;
+
+$input-padding-y: 15px;
+$input-padding-x: 16px;
+$input-font-family: 'Open Sans', sans-serif;
+$input-font-size: 14px;
+$input-font-weight: 400;
+$input-line-height: 1.42;
+$input-color: #B0B6BA;
+$input-bg: #F8F9FA;
+$input-border-color: #DCDCDC;
+$input-placeholder-color: $input-color;
+$input-border-radius: 0;
+
+
+$offcanvas-horizontal-width: 40vw;
+$offcanvas-padding-y:               20px;
+$offcanvas-padding-x:               20px;
+$offcanvas-bg-color:                #343A40;
+$offcanvas-color:                   #fff;

@@ -1,0 +1,52 @@
+.nav-pills {
+  gap: 19px;
+  .nav-link {
+    padding: 0;
+    color: #242424;
+    background: none;
+    border-radius: 0;
+    position: relative;
+    &:hover,
+    &:focus {
+      color: $style;
+    }
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $style;
+    background: none;
+  }
+}
+
+.nav-tabs {
+  gap: 40px;
+  border: none;
+  padding: 0 0 60px;
+  .nav-link {
+    color: #69737A;
+    font-weight: 600;
+    line-height: 19px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin: 0;
+    padding: 0 5px 16px;
+    border-radius: 0;
+    &.active {
+      border-color: $style;
+      background: none;
+      color: $style;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    gap: 16px;
+    .nav-link {
+      padding: 15px 20px;
+      border: 1px solid #E2E2E2;
+      &.active {
+        color: #fff;
+        background: $style;
+      }
+    }
+  }
+}

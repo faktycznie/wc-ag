@@ -1,0 +1,92 @@
+.ag-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .row > * {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+  .col-form-label {
+    padding-top: 0;
+  }
+  .newsletter__input-container {
+    display: flex;
+    flex-wrap: wrap;
+    .newsletter__label-container {
+      min-width: 100px;
+    }
+  }
+  .newsletter__inner {
+    padding: 40px;
+    border: 1px solid #dcdcdc;
+    margin: 0 12px 80px 12px;
+    max-width: 732px;
+    width: 100%;
+  }
+  .newsletter__subtitle-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .newsletter__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .btn {
+      min-width: 122px;
+    }
+    .email-input {
+      max-width: 440px;
+      width: 100%;
+    }
+  }
+  .newsletter__subtitle {
+    font-size: 15px;
+    line-height: 21px;
+    color: #343a40;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .btn-submit {
+    background-color: #343a40;
+    &:hover {
+      background-color: #868e96;
+    }
+  }
+  .btn-cancel {
+    background-color: #fff;
+    border: 1px solid #343a40;
+    color: #343a40;
+    &:hover {
+      background-color: #868e96;
+      color: #fff;
+      border: 1px solid #868e96;
+    }
+  }
+}
+
+.newsletter-message {
+  border: 1px solid #1e8a4c;
+  position: relative !important;
+  align-items: stretch !important;
+  gap: unset !important;
+  p {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &::before {
+    content: '';
+    background-image: url('/app/themes/foreto/assets/img/icons/check.svg');
+    background-color: #1e8a4c;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 88px;
+    position: relative;
+    min-width: 88px;
+    min-height: 88px;
+    display: flex;
+  }
+}

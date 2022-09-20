@@ -1,0 +1,6 @@
+.woocommerce a.button, .woocommerce button.button.alt {
+  border-radius: 0;
+  transition-duration: 200ms;
+  transition-property: background-color;
+  text-transform: uppercase;
+}

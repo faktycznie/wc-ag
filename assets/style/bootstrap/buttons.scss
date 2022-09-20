@@ -1,0 +1,49 @@
+.btn {
+  background: $style;
+  color: #fff;
+  text-transform: uppercase;
+  &:hover,
+  &:focus {
+    background: $style4;
+    color: #fff;
+  }
+  &-primary {
+    background: #000;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    &:focus,
+    &:hover {
+      background: ligthen(#000, 5%);
+      color: #fff;
+    }
+  }
+}
+
+.btn-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  text-align: left;
+  &:hover,
+  &:focus {
+    color: $style;
+    box-shadow: none;
+  }
+}
+
+.btn-border {
+  color: #868E96;
+  background: transparent;
+  border: 1px solid currentColor;
+  &:focus,
+  &:hover {
+    background: transparent;
+    color: #000;
+  }
+}

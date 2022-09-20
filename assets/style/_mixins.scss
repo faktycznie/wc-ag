@@ -1,0 +1,42 @@
+@mixin make-arrow($size: 8px, $border: 2px, $rotate: -45deg) {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -(calc($size / 2));
+    display: block;
+    width: $size;
+    height: $size;
+    color: inherit;
+    border-bottom: $border solid currentColor;
+    border-right: $border solid currentColor;
+    transform: rotate($rotate);
+    transition: all 0.3s ease;
+}
+
+@mixin arrow-right($size: 8px, $border: 2px) {
+    position: relative;
+    &:before {
+        @include make-arrow($size, $border);
+    }
+    &:hover {
+        &:before {
+            right: -10px;
+        }
+    }
+}
+
+
+@mixin arrow-left($size: 8px, $border: 2px) {
+    position: relative;
+    &:before {
+        @include make-arrow($size, $border, 135deg);
+        right: auto;
+        left: 0;
+    }
+    &:hover {
+        &:before {
+            left: -10px;
+        }
+    }
+}

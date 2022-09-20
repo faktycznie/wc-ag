@@ -1,0 +1,34 @@
+.accordion {
+  .accordion-item {
+    border-radius: 0;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-color: #E2E2E2;
+    .accordion-button {
+      box-shadow: none;
+      border-radius: 0;
+      background: none;
+      color: inherit;
+      gap: 40px;
+      &:after {
+        background: none;
+        height: auto;
+        width: auto;
+        font-size: 120%;
+        transform: none;
+      }
+      &[aria-expanded="true"] {
+        color: $style;
+        &:after {
+          content: '+';
+        }
+      }
+      &[aria-expanded="false"] {
+        &:after {
+          content: '-';
+        }
+      }
+    }
+  }
+}

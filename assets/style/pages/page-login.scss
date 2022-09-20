@@ -1,0 +1,95 @@
+.ag-login-wrapper,
+.ag-recover-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  .ag-login-container,
+  .ag-recover-container {
+    padding: 40px;
+    border: 1px solid #dcdcdc;
+  }
+  .ag-login-container {
+    max-width: 732px;
+    width: 100%;
+  }
+  .ag-recover-container {
+    max-width: 732px;
+  }
+
+  form.ag-login,
+  form.ag-recover {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .ag-login,
+  .ag-recover {
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+      display: block;
+    }
+    .form-control {
+      padding: 13px 16px;
+      max-width: 440px;
+    }
+    .btn {
+      background-color: #343a40;
+      min-width: 117px;
+    }
+    .btn-secondary {
+      background-color: #fff;
+      border: 1px solid #343a40;
+      color: #343a40;
+    }
+    .btn-password {
+      background-color: #f8f9fa;
+      border: 1px solid #dcdcdc;
+      border-radius: 0;
+      color: #343a40;
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17px;
+      text-transform: uppercase;
+    }
+    .form-message {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #343a40;
+      text-align: center;
+    }
+  }
+  .register-link {
+    color: #7d1942;
+  }
+}
+.login-box-divider {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+
+.register-form-wrapper {
+  display: flex;
+  justify-content: center;
+  > div {
+    max-width: 732px;
+    form {
+      padding: 40px !important;
+      .woocommerce-privacy-policy-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: #343a40;
+        margin-bottom: 24px;
+        display: none;
+      }
+    }
+  }
+}
